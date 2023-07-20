@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-style: normal;
+}
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  &-notfound {
+    width: 590px;
+    p {
+      color: var(--text-txt-secondary, rgba(60, 60, 67, 0.85));
+      font: 400 24px Inter;
+    }
+    h2 {
+      color: var(--text-txt-primary, #000);
+      font: 700 48px Inter;
+      letter-spacing: 0.25px;
+      margin: 16px 0 40px 0;
+    }
+    &-btn {
+      display: flex;
+
+      &_first {
+        border-radius: 8px;
+        background: var(--brand-primary, #6f1df4);
+        color: var(--pallete-white, #fff);
+        text-align: center;
+        font: 700 16px Inter;
+        padding: 15px 0;
+        width: 145px;
+      }
+      &_first:not(:last-child) {
+        margin: 0 24px 0 0;
+      }
+    }
+  }
+  .txt {
+    color: var(--text-txt-primary, #000);
+    text-align: center;
+    font: 700 250px Inter;
+    margin: 0 0 0 80px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 768px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    &-notfound {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        margin: 32px 0 0 0;
+        font: 400 20px Inter;
+      }
+      h2 {
+        font: 700 48px Inter;
+        text-align: center;
+        margin: 16px 0 32px 0;
+      }
+    }
+
+    .txt {
+      font: 700 200px Inter;
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 343px) {
+  .container {
+    width: 343px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    &-notfound {
+      width: 343px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        font: 400 18px Inter;
+      }
+      h2 {
+        text-align: center;
+        margin: 16px 0 24px 0;
+        font: 700 28px Inter;
+      }
+      &-btn {
+        flex-direction: column;
+        &_first {
+          width: 343px;
+        }
+        &_first:not(:last-child) {
+          margin: 0 0 20px 0;
+        }
+      }
+    }
+  }
+  .txt {
+    font: 700 110px Inter;
+  }
+}
